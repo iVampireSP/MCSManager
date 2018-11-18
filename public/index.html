@@ -47,7 +47,7 @@
 				<span class="glyphicon glyphicon-refresh"></span>
 			</div>
 			<div id='websocket' v-text="status" v-bind:style="{ color: tcolor}" class="PhoneDisplayNone">
-				正在链接到服务器...
+				同步中...
 			</div>
 			<div id='TitleUser' class="PhoneDisplayNone">
 				<span v-if="is">
@@ -57,7 +57,7 @@
 			</div>
 			<div id='loginOut' v-on:click="loginOut()">
 				<span class="glyphicon glyphicon-log-out"></span>
-				退出
+				断开同步
 			</div>
 		</div>
 	</div>
@@ -65,12 +65,12 @@
 		<div id='SideCol' class="">
 			<div id="SideColMenu">
 				<div id='SideColMenuInfo'>
-					Mcserver Manager
+					SakuraPuare MCServer Manager
 					<br>
 					<div id='websocket2'>
 						<div v-if="is">
 							<span class="color-green">Online: </span>{{ MCSERVER.username }}</div>
-						<div v-else>offline (离线)</div>
+						<div v-else>失去同步</div>
 					</div>
 				</div>
 				<div id='SideColFor'>
@@ -90,7 +90,7 @@
 				<div class="OneContainer">
 					<div class="row">
 						<div class="col-xs-12">
-							<h3 id="_TMP_LOADING">请稍等,正在传输资源 ....</h3>
+							<h3 id="_TMP_LOADING">请稍等,正在同步 ....</h3>
 							<script>
 								(function () {
 									var count = 0;
@@ -174,7 +174,7 @@
 	<script type="text/javascript" src="common/js/chart.js"></script>
 
 	<script>
-		if (!window.$) alert('[文件加载失败] 网络不通畅，请检查您的网络状态！');
+		if (!window.$) alert('[同步失败] 网络不通畅，请检查您的网络状态！');
 
 		MCSERVER.website = {};
 
