@@ -11,7 +11,7 @@
 	}, {
 		class: 'glyphicon-equalizer',
 		name: '技术支持',
-		link: 'https://www.puare.site/mc_help',
+		link: './template/link.html',
 		api: null
 	}, ]
 
